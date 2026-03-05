@@ -1,192 +1,237 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px Menlo; -webkit-text-stroke: #000000; min-height: 13.0px}
-    span.s1 {font-kerning: none; font-variant-ligatures: common-ligatures}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DebatableAI — Medical AI Review & Knowledge SaaS</title>
+  <meta
+    name="description"
+    content="DebatableAI is a SaaS platform where medical professionals review, debate, and approve AI-generated answers to health questions, then publish approved knowledge for clinics."
+  />
+
+  <style>
+    :root {
+      --radius: 18px;
+      --border: rgba(0, 0, 0, 0.10);
+      --muted: rgba(0, 0, 0, 0.65);
+      --bg: #ffffff;
+      --panel: rgba(0, 0, 0, 0.03);
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+        "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg);
+      color: #111;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 16px 60px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 12px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.00));
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.02);
+      color: var(--muted);
+    }
+
+    h1 {
+      margin: 6px 0 0;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      grid-column: span 6;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .card ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .card li {
+      margin: 6px 0;
+    }
+
+    .wide {
+      grid-column: span 12;
+    }
+
+    .footer {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #fff;
+    }
+
+    .kv {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 8px 14px;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+
+    .kv strong {
+      color: #111;
+      font-weight: 700;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    .small {
+      font-size: 13px;
+    }
+
+    @media (max-width: 760px) {
+      .card {
+        grid-column: span 12;
+      }
+      .kv {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
-<p class="p1"><span class="s1">&lt;!doctype html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;DebatableAI — Medical AI Review &amp; Knowledge SaaS&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="description" content="DebatableAI is a SaaS platform where medical professionals review, debate, and approve AI-generated answers to health questions, then publish approved knowledge for clinics." /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--radius: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--border: rgba(0,0,0,.10);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--muted: rgba(0,0,0,.65);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--bg: #ffffff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>--panel: rgba(0,0,0,.03);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--bg);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: #111;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.wrap {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>max-width: 980px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin: 0 auto;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 28px 16px 60px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.hero {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 22px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.00));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.brand {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>align-items: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-weight: 800;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>letter-spacing: .2px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.badge {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: inline-block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>font-size: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 4px 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: 999px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: rgba(0,0,0,.02);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1 { margin: 6px 0 0; font-size: 34px; line-height: 1.15; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>p { margin: 0; color: var(--muted); line-height: 1.5; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.grid {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-template-columns: repeat(12, 1fr);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-column: span 6;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: var(--panel);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card h2 { margin: 0 0 8px; font-size: 18px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.card li { margin: 6px 0; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.wide { grid-column: span 12; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.footer {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>padding: 18px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>border: 1px solid var(--border);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>background: #fff;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.kv {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>display: grid;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid-template-columns: 160px 1fr;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>gap: 8px 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>margin-top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>color: var(--muted);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.kv strong { color: #111; font-weight: 700; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>a { color: inherit; text-decoration: underline; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.small { font-size: 13px; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>@media (max-width: 760px) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.card { grid-column: span 12; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>.kv { grid-template-columns: 1fr; }</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="hero"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="brand"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span&gt;DebatableAI&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;span class="badge"&gt;SaaS • Under Development&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;h1&gt;Medical AI Review &amp; Knowledge Platform&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>DebatableAI is a SaaS tool where medical professionals review, debate, and approve AI-generated answers to common health questions.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>Approved content can then be published in a clinic’s knowledge section (via API) to help patients find reliable guidance.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="grid"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Product&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>A web + mobile platform that helps medical teams collaborate on AI responses and produce approved, publishable knowledge entries.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Clinician discussion threads around an AI response&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Approval workflow (draft → approved/published)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Organization/clinic knowledge feed and search endpoint&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Audit trail and role-based access (doctor/moderator/admin)&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Who it’s for&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Clinics and medical organizations that want internal oversight of AI-assisted answers and a controlled way to publish vetted content.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Clinics&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Medical groups&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Private practices&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;li&gt;Healthcare content teams&lt;/li&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card wide"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Payments&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Users subscribe monthly per organization to access premium features, including AI-assisted discussions, approval workflows,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>and the clinic knowledge API/feed.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="kv"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Billing model&lt;/strong&gt;&lt;span&gt;Monthly subscription (SaaS)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Example plans&lt;/strong&gt;&lt;span&gt;Starter / Pro / Enterprise&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;What’s included&lt;/strong&gt;&lt;span&gt;Team access, debate workflow, approved knowledge export via API&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Refund policy&lt;/strong&gt;&lt;span&gt;Refunds are evaluated case-by-case. Contact us within 14 days of purchase.&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Cancellation&lt;/strong&gt;&lt;span&gt;Customers can cancel anytime; access remains until the end of the billing period.&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="small" style="margin-top:10px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Note: The product is under active development and features may change before the public launch.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="card wide"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Company&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="kv"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Company name&lt;/strong&gt;&lt;span&gt;XYZ Software SRL&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Contact&lt;/strong&gt;&lt;span&gt;&lt;a href="mailto:contact@xyz.com"&gt;contact@xyz.com&lt;/a&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Support&lt;/strong&gt;&lt;span&gt;&lt;a href="mailto:support@xyz.com"&gt;support@xyz.com&lt;/a&gt;&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;strong&gt;Location&lt;/strong&gt;&lt;span&gt;Romania (EU)&lt;/span&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="footer wide"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h2&gt;Important information&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="small"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>DebatableAI is intended to support clinicians and clinic teams. It is not a substitute for professional medical judgment.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Public-facing content is published only after clinician review/approval (where enabled). For emergencies, patients should contact local emergency services.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="small" style="margin-top:8px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>Privacy: The platform is designed to minimize sensitive data; organizations are responsible for ensuring compliance with applicable laws and internal policies.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+  <div class="wrap">
+    <div class="hero">
+      <div class="brand">
+        <span>DebatableAI</span>
+        <span class="badge">SaaS • Under Development</span>
+      </div>
+
+      <h1>Medical AI Review &amp; Knowledge Platform</h1>
+
+      <p>
+        DebatableAI is a SaaS tool where medical professionals review, debate, and approve AI-generated answers to common health questions.
+        Approved content can then be published in a clinic’s knowledge section (via API) to help patients find reliable guidance.
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Product</h2>
+        <p>
+          A web + mobile platform that helps medical teams collaborate on AI responses and produce approved, publishable knowledge entries.
+        </p>
+        <ul>
+          <li>Clinician discussion threads around an AI response</li>
+          <li>Approval workflow (draft → approved/published)</li>
+          <li>Organization/clinic knowledge feed and search endpoint</li>
+          <li>Audit trail and role-based access (doctor/moderator/admin)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Who it’s for</h2>
+        <p>
+          Clinics and medical organizations that want internal oversight of AI-assisted answers and a controlled way to publish vetted content.
+        </p>
+        <ul>
+          <li>Clinics</li>
+          <li>Medical groups</li>
+          <li>Private practices</li>
+          <li>Healthcare content teams</li>
+        </ul>
+      </div>
+
+      <div class="card wide">
+        <h2>Payments</h2>
+        <p>
+          Users subscribe monthly per organization to access premium features, including AI-assisted discussions, approval workflows,
+          and the clinic knowledge API/feed.
+        </p>
+
+        <div class="kv">
+          <strong>Billing model</strong><span>Monthly subscription (SaaS)</span>
+          <strong>Example plans</strong><span>Starter / Pro / Enterprise</span>
+          <strong>What’s included</strong><span>Team access, debate workflow, approved knowledge export via API</span>
+          <strong>Refund policy</strong><span>Refunds are evaluated case-by-case. Contact us within 14 days of purchase.</span>
+          <strong>Cancellation</strong><span>Customers can cancel anytime; access remains until the end of the billing period.</span>
+        </div>
+
+        <p class="small" style="margin-top: 10px;">
+          Note: The product is under active development and features may change before the public launch.
+        </p>
+      </div>
+
+      <div class="card wide">
+        <h2>Company</h2>
+        <div class="kv">
+          <strong>Company name</strong><span>XYZ Software SRL</span>
+          <strong>Contact</strong><span><a href="mailto:contact@xyz.com">contact@xyz.com</a></span>
+          <strong>Support</strong><span><a href="mailto:support@xyz.com">support@xyz.com</a></span>
+          <strong>Location</strong><span>Romania (EU)</span>
+        </div>
+      </div>
+
+      <div class="footer wide">
+        <h2>Important information</h2>
+        <p class="small">
+          DebatableAI is intended to support clinicians and clinic teams. It is not a substitute for professional medical judgment.
+          Public-facing content is published only after clinician review/approval (where enabled). For emergencies, patients should
+          contact local emergency services.
+        </p>
+        <p class="small" style="margin-top: 8px;">
+          Privacy: The platform is designed to minimize sensitive data; organizations are responsible for ensuring compliance with applicable laws and internal policies.
+        </p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
